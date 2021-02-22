@@ -1,8 +1,6 @@
 .page_content{
     min-height: 360px;
-    padding-top: 20px;
-    padding-left: 150px;
-    padding-right: 150px;
+    padding: 20px 150px 60px 150px;
 }
 .sidebar{
     display: flex;
@@ -12,7 +10,9 @@
 .sidebar .sidebar_content{
     margin-top: 40px;
 }
-.sidebar .sidebar_content p {
+.sidebar .sidebar_content .anticon {
+    padding: 13px;
+    cursor: pointer;
     color: white;
     font-size: 20px;
     width: 100%;
@@ -21,25 +21,44 @@
     justify-content: center;
     justify-items: center;
 }
-.site_header{
+.sidebar .sidebar_content .anticon:hover {
+    background-color: #ffffff2e;
+}
+.ant-layout-header{
     background-color: #0371c5;
 }
 .header_title{
+    padding: 0 10px;
     color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
 }
-.header_icons span{
-    margin: 0 5px 0 5px;
-    padding: 3px;
-    font-size: 16px
+.header_actions {
+    display: flex;
+    align-items: center;
+}
+.header_actions span{
+    margin: 0;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.header_actions span:hover {
+    background-color: #ffffff2e;
+}
+.header_actions .text {
+    border-right: 1px solid #ffffff87;
+    padding-right: 20px;
+    margin-right: 10px;
+    cursor: default;
 }
 .page_header_performance{
     margin-top: 24px;
 }
 .page_header{
+    padding: 0 10px;
     background-color: #edecec;
     color: #8f8f8f;
     height: 45px;
@@ -49,16 +68,18 @@
     margin-bottom: 30px;
 }
 .header_title h1 {
+    font-weight: bold;
+    font-size: 20px;
     color: white;
-    marginLeft: 10px;
-
+    margin-bottom: 0px;
 }
 .page_filters{
     border: solid 1px #e2e2e2;
     width: 270px;
     margin-bottom: 20px;
+    border-radius: 8px;
 }
-.page_filters div{
+.page_filters .item{
     padding: 10px;
     display: flex;
     flex-direction: row;;
@@ -66,10 +87,7 @@
 .page_filters p{
    margin: 0 10px 5px;
 }
-.page_quality_score div{
-    display: inline-flex;
-    flex-direction: row;;
-}
+
 .page_quality_score p {
     color: white;
     padding: 5px;
@@ -77,32 +95,46 @@
     margin: 0 5px 0 5px;
 }
 .pie_chart{
-    border: solid 2px #dfdfdf;
+    border: solid 1px #dfdfdf;
     margin: 0 10px 15px 0;
     cursor: pointer;
+    border-radius: 5px;
 }
-.pie_chart.active{
+.pie_chart .recharts-wrapper {
+    cursor: pointer !important;
+}
+.pie_chart.inactive{
+    border: solid 1px #e7e7e7;
+}
+.pie_chart.active {
     background-color: #f1fafe;
-    border: solid 3px #0371c5;
+    border: solid 1px #0371c5;   
 }
-.day_label{
+.labels {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.label {
+    text-align: center;
+    cursor: pointer;
+}
+.label.day_label{
     background-color: #c0dcf1;
     width: 40px;
 }
-.inactive_label{
+.label.inactive_label{
     background-color: #0371c5;
     width: 60px;
 }
-.active_label{
+.label.active_label{
     background-color: #06426f;
     width: 60px;
 }
 @media screen and (max-width: 800px){
     .page_content{
         min-height: 600px;
-        padding-top: 0px;
-        padding-left: 0px;
-        padding-right: 10px;
+        padding: 15px;
     }
     .sidebar .sidebar_content p {
         font-size: 12px;
@@ -112,13 +144,13 @@
         flex-direction: column;
         line-height: 10px;
         justify-content: space-around;
-        padding: 0 10px;
-        height: 80px;
+        padding: 5px 10px;
+        height: 65px;
     }
-    .header_icons span{
+    .header_actions span{
         margin: 0 2px 0 2px;
         padding: 1px;
-        font-size: 12px
+        font-size: 15px
     }
     .page_header_performance{
         font-size: 15px;
@@ -135,15 +167,15 @@
     }
     .page_filters{
         border: solid 1px #e2e2e2;
-        width: 200px;
+        width: 250px;
         margin-bottom: 7px;
     }
-    .page_filters div{
+    .page_filters .item{
         padding: 5px;
     }
     .page_filters p{
         margin: 0 5px 5px;
-        font-size: 8px;
+        font-size: 12px;
     }
     .page_quality_score h1{
         font-size: 14px;
@@ -164,5 +196,16 @@
     }
     .active_label{
         width: 40px;
+    }
+    .recharts-wrapper {
+        margin-top: 50px;
+        max-width: 100%;
+        overflow: scroll;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .page_content {
+        padding: 50px;
     }
 }
