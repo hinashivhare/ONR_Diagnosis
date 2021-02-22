@@ -1,0 +1,72 @@
+{
+  "extends": [
+    "airbnb-base",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["import", "react-hooks"],
+  "parserOptions": { "ecmaVersion": 6 },
+  "settings": {
+    "import/parsers": {},
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"],
+        "moduleDirectory": ["node_modules", "src/"]
+      },
+    },
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "array-callback-return": "off",
+    "func-names": "off",
+    "consistent-return": "off",
+    "class-methods-use-this": "off",
+    "default-case": "off",
+    "import/prefer-default-export": "off",
+    "no-await-in-loop": "off",
+    "no-case-declarations": "off",
+    "no-console": "warn",
+    "no-else-return": "off",
+    "react/jsx-no-target-blank": "off",
+    "no-continue": "off",
+    "no-nested-ternary": "off",
+    "no-param-reassign": "off",
+    "no-plusplus": "off",
+    "no-restricted-globals": "off",
+    "no-underscore-dangle": "off",
+    "no-restricted-syntax": "off",
+    "import/order": "warn",
+    "prefer-destructuring": "error",
+    "prefer-template": "off",
+    "react/prop-types": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+      }
+    ],
+    "import/no-extraneous-dependencies": "warn",
+    "import/no-duplicates": "warn",
+    "import/no-mutable-exports": "warn",
+    "no-restricted-properties": "warn",
+    "no-control-regex": "off",
+    "no-useless-escape": "warn",
+    "no-unused-expressions": "warn",
+    "no-async-promise-executor": "warn",
+    "import/no-unresolved": "warn",
+    "import/no-cycle": "warn",
+    "guard-for-in": "off",
+    "camelcase": "warn",
+    "radix": "off"
+  }
+}

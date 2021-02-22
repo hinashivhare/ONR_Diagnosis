@@ -1,0 +1,31 @@
+" ============================================================================
+" Netrw Directory Listing                                        (netrw v168)
+"   /Users/hinashivhare/code
+"   Sorted by      name
+"   Sort sequence: [\/]$,\<core\%(\.\d\+\)\=\>,\.h$,\.c$,\.cpp$,\~\=\*$,*,\.o$,\.obj$,\.info$,\.swp$,\.bak$,\~$
+"   Quick Help: <F1>:help  -:go up dir  D:delete  R:rename  s:sort-by  x:special
+" ==============================================================================
+../
+./
+ONR_Diagnosis/
+blog/
+book_store/
+collab/
+components/
+ednow/
+jsx/
+pics/
+portfolio/
+portfolio1/
+portfolio2/
+profile-app/
+seasons/
+songs/
+streams/
+theapp/
+typescript/
+videos-hooks/
+videos/
+widgets/
+.DS_Store
+Completion Certificate.pdf
